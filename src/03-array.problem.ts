@@ -7,9 +7,7 @@ const StarWarsPerson = z.object({
   name: z.string(),
 });
 
-const StarWarsPeopleResults = z.object({
-  results: z.array(StarWarsPerson)
-});
+const StarWarsPeopleResults = z.unknown();
 //                            ^ 🕵️‍♂️
 
 export const fetchStarWarsPeople = async () => {
