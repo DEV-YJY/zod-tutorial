@@ -10,9 +10,8 @@ const StarWarsPeopleResults = z.object({
   results: z.array(StarWarsPerson),
 });
 
-type TypeZ  = z.infer<typeof StarWarsPeopleResults>
 
-const logStarWarsPeopleResults = (data: TypeZ) => {
+const logStarWarsPeopleResults = (data: any) => {
   //                                    ^ 🕵️‍♂️
   data.results.map((person) => {
     console.log(person.name);
