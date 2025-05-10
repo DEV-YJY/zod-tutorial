@@ -6,11 +6,11 @@ import { z } from "zod";
 const Form = z.object({
   name: z.string(),
   //             ^ 🕵️‍♂️
-  phoneNumber: z.string().min(5).max(20).optional(),
+  phoneNumber: z.string().optional(),
   //                    ^ 🕵️‍♂️
-  email: z.string().email(),
+  email: z.string(),
   //              ^ 🕵️‍♂️
-  website: z.string().url().optional(),
+  website: z.string().optional(),
   //                ^ 🕵️‍♂️
 });
 
